@@ -7,17 +7,14 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.animation.LinearInterpolator;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-
-import com.hanjx.samplecode.main.MainActivity;
+import androidx.appcompat.widget.AppCompatTextView;
 
 import static com.hanjx.samplecode.utils.DensityUtils.dp2px;
 
-public class CountDownView extends TextView {
+public class CountDownView extends AppCompatTextView {
 
     // 倒计时时间
     private long duration = 2000L;
@@ -94,8 +91,6 @@ public class CountDownView extends TextView {
         if (sweepAngle == 360) {
             sweepAngle = 0;
         }
-        MainActivity.end = System.currentTimeMillis();
-        Log.d("hjx", "last: " + (MainActivity.end - MainActivity.start));
     }
 
     public void setDuration(long duration) {
