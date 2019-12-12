@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.hanjx.samplecode.R;
 
-public class SmallWindowsActivity_ApiGuide extends AppCompatActivity {
+public class FloatWindowsActivity_ApiGuide extends AppCompatActivity {
 
     Button button;
     TextView textView;

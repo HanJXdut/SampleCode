@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.hanjx.samplecode.R;
+import com.hanjx.samplecode.utils.GlobalConfig;
 import com.hanjx.samplecode.utils.SystemUtils;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        GlobalConfig.setAppContextContainer(getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SystemUtils.resetAnimatorDurationScale();
