@@ -26,11 +26,8 @@ public class CountDownActivity extends AppCompatActivity {
         countDownView.setDuration(2000L);
         countDownView.setPaintColor(Color.GRAY);
         countDownView.setPaintWidthDp(4);
-        countDownView.setAnimatorTimerListener(currentTime -> {
-            String newText = "" + ((countDownView.getDuration() - currentTime) / 1000 + 1);
-            countDownView.setText(newText);
-        });
+        countDownView.setDefaultTimerListener();
 
-        button.setOnClickListener(v -> countDownView.start());
+        button.setOnClickListener(v -> countDownView.startCountDown());
     }
 }

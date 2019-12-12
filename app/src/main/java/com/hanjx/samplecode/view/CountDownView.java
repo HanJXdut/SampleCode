@@ -53,7 +53,7 @@ public class CountDownView extends AppCompatTextView {
         mBackgroundPaint.setStrokeWidth(dp2px(paintWidthDp));
     }
 
-    public void start() {
+    public void startCountDown() {
         if (sweepAngle != 0) {
             animator.cancel();
             sweepAngle = 0;
@@ -133,7 +133,19 @@ public class CountDownView extends AppCompatTextView {
         this.animatorTimerListener = animatorTimerListener;
     }
 
+    public void setDefaultTimerListener() {
+        this.animatorTimerListener = new NumberCountDownListener();
+    }
+
     public interface AnimatorTimerListener {
         void onTimeUpdate(Long currentTime);
+    }
+
+    protected class NumberCountDownListener implements AnimatorTimerListener {
+        @Override
+        public void onTimeUpdate(Long currentTime) {
+            String newText = "" + ((int) Math.floor((double) (getDuration() - currentTime) / 1000) + 1);
+            setText(newText);
+        }
     }
 }
