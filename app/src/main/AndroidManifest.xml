@@ -17,6 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.CountDownActivity" />
+        <activity android:name=".activity.TestActivity" />
+        <activity android:name=".activity.small_window.SmallWindowsActivity_ApiGuide"
+            android:launchMode="singleTask"
+            android:supportsPictureInPicture="true"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"/>
     </application>
 
 </manifest>

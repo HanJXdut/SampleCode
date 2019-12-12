@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.hanjx.samplecode.R;
 import com.hanjx.samplecode.activity.CountDownActivity;
+import com.hanjx.samplecode.activity.small_window.SmallWindowsActivity_ApiGuide;
+import com.hanjx.samplecode.activity.TestActivity;
 
 import java.util.ArrayList;
 
@@ -19,6 +21,8 @@ public class FunctionListAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     private static final ArrayList<Class> activityClass = new ArrayList<Class>() {
         {
             add(CountDownActivity.class);
+            add(TestActivity.class);
+            add(SmallWindowsActivity_ApiGuide.class);
         }
     };
 
