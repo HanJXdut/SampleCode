@@ -23,8 +23,10 @@
             android:launchMode="singleTask"
             android:supportsPictureInPicture="true"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"/>
-        <activity android:name=".activity.small_window.MyFloatActivity" />
-        <service android:name=".activity.small_window.MyFloatService" />
+        <activity android:name=".activity.small_window.MyFloatActivity"
+            android:launchMode="singleTask"/>
+
+        <service android:name=".activity.small_window.FloatService" />
     </application>
 
 </manifest>
