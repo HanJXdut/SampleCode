@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        GlobalConfig.setAppContextContainer(getApplicationContext());
+        GlobalConfig.init(getApplicationContext());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SystemUtils.resetAnimatorDurationScale();
